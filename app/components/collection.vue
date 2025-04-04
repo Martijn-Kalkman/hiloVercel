@@ -17,7 +17,7 @@
         <div class="absolute right-0 flex justify-end top-0 w-full 2xl:w-auto flex-none">
           <img
             src="/hi-locollection1.webp"
-            class="w-[20%] 2xl:w-auto mt-[10%] 2xl:mt-auto"
+            class="w-[40%] 2xl:w-auto mt-[10%] 2xl:mt-auto"
             alt="OH Merch photo"
           />
         </div>
