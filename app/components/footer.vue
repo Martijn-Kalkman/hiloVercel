@@ -10,7 +10,7 @@ const scrollToSection = (sectionId) => {
   }
 };
 </script>
-
+ 
 <template>
   <footer id="contact" class="relative text-white">
     <div class="lg:flex lg:flex-row w-11/12 mx-auto">
