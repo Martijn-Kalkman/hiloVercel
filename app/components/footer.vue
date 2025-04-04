@@ -10,7 +10,7 @@ const scrollToSection = (sectionId) => {
   }
 };
 </script>
- 
+
 <template>
   <footer id="contact" class="relative text-white">
     <div class="lg:flex lg:flex-row w-11/12 mx-auto">
@@ -34,8 +34,9 @@ const scrollToSection = (sectionId) => {
           <ul>
             <div class="text-center">
               <p>BOOKING ROW</p>
-              <p>CAA</p>
-              <a href="mailto:jennifer.hammel@caa.com" class="underline">jennifer.hammel@caa.com</a>
+              <p>WASSERMAN</p>
+              <a href="mailto:dave.blackgrove@teamwass.com" class="underline">dave.blackgrove@teamwass.com</a> <br>
+              <a href="mailto:ollie.seaman@teamwass.com" class="underline">ollie.seaman@teamwass.com</a>
             </div>
           </ul>
         </div>

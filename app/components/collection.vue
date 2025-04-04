@@ -4,7 +4,7 @@
       <h2
         class="2xl:text-7xl mb-8 text-5xl leading-[1.15] text-white font-bold text-left flex justify-end hi-lo"
       >
-        OH COLLECTION
+      HILOMATIK COLLECTION
       </h2>
       <div class="relative flex 2xl:flex-row justify-between">
         <div class="flex-none w-full">
@@ -17,7 +17,7 @@
         <div class="absolute right-0 flex justify-end top-0 w-full 2xl:w-auto flex-none">
           <img
             src="/hi-locollection1.webp"
-            class="w-[40%] 2xl:w-auto mt-[10%] 2xl:mt-auto"
+            class="w-[20%] 2xl:w-auto mt-[10%] 2xl:mt-auto"
             alt="OH Merch photo"
           />
         </div>

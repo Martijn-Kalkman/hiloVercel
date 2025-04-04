@@ -1,19 +1,42 @@
 <template>
   <section>
-    <div class="flex flex-row">
+    <div class="flex flex-col sm:flex-row justify-between">
       <div>
-        <h2
-          class="w-11/12 mx-auto lg:text-9xl text-4xl mb-12 font-bold text-white"
-        >
+        <h2 class="w-11/12 mx-auto lg:text-7xl text-4xl mb-4 ml-4 mt-4 font-bold text-white">
           SOCIALS
         </h2>
       </div>
-      <div class="my-auto ml-8">
-        <Icon
-          class="lg:h-16 lg:w-16 px-5 h-8 w-8 lg:px-10"
-          name="icons:instagram"
-          color="white"
-        />
+      <div class="flex m-4 lg:m-0 flex-row mx-auto sm:justify-end mr-4 lg:mr-32">
+        <div class="flex items-center gap-x-4 lg:gap-x-8 ml-8">
+          <NuxtLink
+            to="https://www.instagram.com/hilo_ofc/"
+            target="_blank"
+            class="flex items-center"
+          >
+            <Icon class="lg:h-16 lg:w-16 h-12 w-12" name="icons:instagram" color="white" />
+          </NuxtLink>
+
+          <NuxtLink
+            to="https://www.youtube.com/@HILOofficial"
+            target="_blank"
+            class="flex items-center"
+          >
+            <Icon class="lg:h-16 lg:w-16 h-12 w-12" name="icons:youtube" color="white" />
+          </NuxtLink>
+
+          <NuxtLink
+            to="https://x.com/official_hilo"
+            target="_blank"
+            class="flex items-center gap-x-2"
+          >
+          
+            <Icon class="lg:h-14 lg:w-14 h-12 w-12" name="icons:x" color="white" />
+          </NuxtLink>
+
+            <h3 class="text-white lg:block hidden font-bold text-2xl lg:text-4xl">
+              @hilo_ofc
+            </h3>
+        </div>
       </div>
     </div>
   </section>

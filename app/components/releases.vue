@@ -36,16 +36,16 @@ onClickOutside(target, (event) => {
 
           <div class="flex flex-col lg:flex-row lg:ml-8 lg:absolute lg:top-0 lg:right-0 lg:p-6 p-4">
             <div class="flex justify-center gap-4 flex-wrap mb-24 lg:mb-0">
-              <a target="_blank" href="https://open.spotify.com/user/oliverheldens">
+              <a target="_blank" href="https://open.spotify.com/artist/0ETJQforv5OXgDgidQv9qd">
                 <Icon class="lg:h-16 lg:w-16 h-12 w-12 px-5 lg:px-10" name="icons:spotify" color="black" />
               </a>
-              <a target="_blank" href="https://soundcloud.com/oliverheldens">
+              <a target="_blank" href="https://music.apple.com/us/artist/hi-lo/1008492024">
                 <Icon class="lg:h-16 lg:w-16 h-12 w-12 px-5 lg:px-10" name="icons:soundcloud" color="black" />
               </a>
               <a target="_blank" href="https://music.apple.com/us/artist/oliver-heldens/608826395">
                 <Icon class="lg:h-16 lg:w-16 h-12 w-12 lg:px-10" name="icons:apple" color="black" />
               </a>
-              <a target="_blank" href="https://www.youtube.com/@OliverHeldens">
+              <a target="_blank" href="https://www.youtube.com/@HILOofficial">
                 <Icon class="lg:h-16 lg:w-16 h-12 w-12 lg:px-10" name="icons:youtube" color="black" />
               </a>
             </div>
@@ -57,16 +57,16 @@ onClickOutside(target, (event) => {
     <div class="w-full items-center mx-auto flex flex-col lg:flex-row lg:mt-12 gap-8 lg:gap-12 transition-all duration-300">
       <!-- Spotify embed for an artist -->
       <div class="w-full lg:w-6/12 flex flex-col items-center lg:items-start lg:p-6 rounded-lg shadow-lg transition-all duration-300">
-        <div class="w-full mx-auto lg:w-auto rounded-xl">
+        <div class="w-full lg:w-auto ml-auto rounded-xl">
           <iframe src="https://open.spotify.com/embed/artist/0ETJQforv5OXgDgidQv9qd?utm_source=generator"
-            class="lg:w-[35vw] w-[93vw] rounded-xl h-[850px]" frameborder="0"
+            class="lg:w-[40vw] w-[93vw] rounded-xl h-[850px]" frameborder="0"
             referrerpolicy="no-referrer-when-downgrade"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
 
       <!-- DJset Playlist -->
-      <div class="bg-[#045A6A] lg:w-[35vw] w-[93vw] mx-auto p-4 rounded-xl overflow-scroll lg:h-[850px] no-scrollbar">
+      <div class="bg-[#045A6A] lg:w-[40vw] w-[93vw]  p-4 rounded-xl overflow-scroll lg:h-[850px] no-scrollbar">
         <div class="flex flex-row justify-between">
           <div>
             <h3 class="lg:text-4xl my-auto text-4xl font-bold">LIVE SETS</h3>
