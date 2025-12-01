@@ -1,0 +1,20 @@
+{
+  "name": "HI-LO Official Website",
+  "short_name": "HI-LO",
+  "description": "Official website of HI-LO (Oliver Heldens). Discover latest music releases, upcoming events, and exclusive merchandise.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["music", "entertainment"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
