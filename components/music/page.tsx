@@ -3,7 +3,6 @@ import MusicClient from './_components/music-client';
 import { unstable_cache } from 'next/cache';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSpotify, faApple, faYoutube, faSoundcloud} from '@fortawesome/free-brands-svg-icons';
-import { faCloud } from '@fortawesome/free-regular-svg-icons';
 
 // --- Constants for better maintainability ---
 
@@ -41,7 +40,10 @@ const getCachedYoutubePlaylists = unstable_cache(
       const playlists = await getYoutubePlaylists();
       return playlists;
     } catch (error) {
-      console.error('Failed to fetch YouTube playlists:', error);
+      // Only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Failed to fetch YouTube playlists:', error);
+      }
       return {
         djset: {
           kind: 'youtube#playlistItemListResponse',
@@ -110,11 +112,11 @@ export default async function MusicSection() {
             <div className="w-full lg:w-auto mx-auto rounded-xl">
               <iframe
                 src={SPOTIFY_ARTIST_EMBED_SRC}
-                className="lg:w-[40vw] w-[93vw] rounded-xl h-[850px]"
-                frameBorder="0"
+                className="lg:w-[40vw] w-[93vw] rounded-xl h-[850px] border-0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
                 title="Spotify Artist Embed"
+                style={{ border: 'none' }}
               />
             </div>
           </div>

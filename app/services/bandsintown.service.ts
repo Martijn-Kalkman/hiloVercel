@@ -61,7 +61,10 @@ export async function getBandsInTownEvents(): Promise<BandsInTownEvent[]> {
     const appId = process.env.BANDSINTOWN_API;
 
     if (!appId) {
-        console.error('BandsInTown API App ID not found in environment variables.');
+        // Silently fail in production, only log in development
+        if (process.env.NODE_ENV === 'development') {
+            console.error('BandsInTown API App ID not found in environment variables.');
+        }
         return [];
     }
 
@@ -73,23 +76,31 @@ export async function getBandsInTownEvents(): Promise<BandsInTownEvent[]> {
         });
 
         if (!response.ok) {
-            const errorText = await response.text();
-            console.error(
-                `BandsInTown API fetch failed: ${response.status} ${response.statusText}. Details: ${errorText.substring(0, 100)}`
-            );
+            // Only log in development
+            if (process.env.NODE_ENV === 'development') {
+                const errorText = await response.text();
+                console.error(
+                    `BandsInTown API fetch failed: ${response.status} ${response.statusText}. Details: ${errorText.substring(0, 100)}`
+                );
+            }
             return [];
         }
 
         const data = (await response.json()) as BandsInTownApiResponse[];
 
         if (!Array.isArray(data)) {
-            console.error('BandsInTown API returned malformed data (not an array).');
+            if (process.env.NODE_ENV === 'development') {
+                console.error('BandsInTown API returned malformed data (not an array).');
+            }
             return [];
         }
 
         return data.map(transformApiEvent);
     } catch (error) {
-        console.error('An unexpected error occurred while fetching BandsInTown events:', error);
+        // Only log in development
+        if (process.env.NODE_ENV === 'development') {
+            console.error('An unexpected error occurred while fetching BandsInTown events:', error);
+        }
         return [];
     }
 }

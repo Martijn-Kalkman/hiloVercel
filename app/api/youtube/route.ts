@@ -6,7 +6,10 @@ export async function GET() {
     const playlists = await getYoutubePlaylists();
     return NextResponse.json(playlists, { status: 200 });
   } catch (error) {
-    console.error('Error in YouTube Route Handler:', error);
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error in YouTube Route Handler:', error);
+    }
     return NextResponse.json(
       { message: 'Failed to retrieve YouTube data.' },
       { status: 500 }

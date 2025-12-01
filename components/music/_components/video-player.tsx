@@ -42,7 +42,7 @@ export default function VideoPlayer({ videoId, isOpen, onClose }: VideoPlayerPro
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/90 p-4">
+    <div className="fixed inset-0 flex items-center justify-center z-90 bg-black/90 p-4">
       
       <div 
         ref={containerRef} 
@@ -51,11 +51,11 @@ export default function VideoPlayer({ videoId, isOpen, onClose }: VideoPlayerPro
         
         <iframe
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-          className="absolute inset-0 w-full h-full"
-          frameBorder="0"
+          className="absolute inset-0 w-full h-full border-0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
           allowFullScreen
           title="YouTube video player"
+          style={{ border: 'none' }}
         />
         <button
           onClick={onClose}

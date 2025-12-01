@@ -11,7 +11,10 @@ const getCachedBandsInTownEvents = unstable_cache(
       const events = await getBandsInTownEvents();
       return events;
     } catch (error) {
-      console.error('Failed to fetch events:', error);
+      // Only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Failed to fetch events:', error);
+      }
       return [];
     }
   },

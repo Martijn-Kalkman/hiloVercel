@@ -4,7 +4,10 @@ async function getVideoPlaylist(playlistId: string): Promise<YoutubePlaylistDto>
   const apiKey = process.env.YOUTUBE_API || process.env.NEXT_PUBLIC_YOUTUBE_API;
   
   if (!apiKey) {
-    console.warn('YOUTUBE_API not found.');
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('YOUTUBE_API not found.');
+    }
     return {
       kind: 'youtube#playlistItemListResponse',
       etag: '',
@@ -29,7 +32,10 @@ async function getVideoPlaylist(playlistId: string): Promise<YoutubePlaylistDto>
 
     return await response.json();
   } catch (error) {
-    console.error('Error fetching YouTube playlist:', error);
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error fetching YouTube playlist:', error);
+    }
     return {
       kind: 'youtube#playlistItemListResponse',
       etag: '',
